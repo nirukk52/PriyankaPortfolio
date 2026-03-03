@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priyanka Lalge | Ethnic Fashion Model</title>
+  <meta name="description" content="Priyanka Lalge — Indian ethnic fashion model based in Houston, TX. Available for bridal campaigns, fashion editorials, runway shows, and commercial projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-cream: #FAF8F5;
+      --bg-warm: #F0EAE2;
+      --bg-dark: #1A1714;
+      --text-primary: #1A1A1A;
+      --text-secondary: #6B6358;
+      --text-light: #A09688;
+      --accent: #B8956A;
+      --accent-light: #D4B896;
+      --border: #E0D6CB;
+      --white: #FFFFFF;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      background-color: var(--bg-cream);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.4s ease;
+    }
+
+    .nav.scrolled {
+      background: rgba(250, 248, 245, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 1rem 3rem;
+      box-shadow: 0 1px 0 var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-logo em {
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      width: 24px;
+      height: 1.5px;
+      background: var(--text-primary);
+      transition: all 0.3s ease;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .hero-content {
+      flex: 0 0 42%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 4rem 4rem 4rem;
+    }
+
+    .hero-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 500;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-name em {
+      display: block;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .hero-tagline {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      max-width: 380px;
+    }
+
+    .hero-cta {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--accent);
+      padding-bottom: 0.5rem;
+      display: inline-block;
+      width: fit-content;
+      transition: all 0.3s ease;
+    }
+
+    .hero-cta:hover {
+      color: var(--text-primary);
+      border-color: var(--text-primary);
+    }
+
+    .hero-image {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+    }
+
+    /* ===== SECTION UTILITIES ===== */
+    .section {
+      padding: 6rem 4rem;
+    }
+
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+    }
+
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-heading em {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .gold-line {
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about {
+      background: var(--bg-cream);
+    }
+
+    .about-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text {
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      max-width: 500px;
+    }
+
+    .about-text p + p {
+      margin-top: 1.5rem;
+    }
+
+    .about-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 550px;
+      object-fit: cover;
+      object-position: center top;
+      filter: grayscale(0%);
+      transition: filter 0.5s ease;
+    }
+
+    .about-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--border);
+      pointer-events: none;
+    }
+
+    /* ===== DETAILS SECTION ===== */
+    .details {
+      background: var(--bg-warm);
+    }
+
+    .details-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .detail-card {
+      padding: 2.5rem 2rem;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .detail-card:last-child {
+      border-right: none;
+    }
+
+    .detail-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .detail-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    /* ===== PORTFOLIO SECTION ===== */
+    .portfolio {
+      background: var(--bg-cream);
+    }
+
+    .portfolio-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .portfolio-filters {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      background: none;
+      border: 1px solid transparent;
+      padding: 0.6rem 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+      color: var(--text-secondary);
+    }
+
+    .filter-btn.active {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .gallery-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 3 / 4;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .gallery-item.hidden {
+      opacity: 0;
+      transform: scale(0.95);
+      pointer-events: none;
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26, 23, 20, 0.5) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-category {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    /* ===== LIGHTBOX ===== */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(26, 23, 20, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      cursor: zoom-out;
+    }
+
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .lightbox img {
+      max-width: 85vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border: none;
+      transform: scale(0.95);
+      transition: transform 0.4s ease;
+    }
+
+    .lightbox.active img {
+      transform: scale(1);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 40px;
+      height: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-close svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--white);
+      stroke-width: 1.5;
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact {
+      background: var(--bg-dark);
+      color: var(--white);
+    }
+
+    .contact .section-label {
+      color: var(--accent-light);
+    }
+
+    .contact .section-heading {
+      color: var(--white);
+    }
+
+    .contact .section-heading em {
+      color: var(--accent-light);
+    }
+
+    .contact-description {
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: #A09688;
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 3rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .contact-icon {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .contact-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #D4CFC8;
+    }
+
+    .contact-value a {
+      color: #D4CFC8;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-value a:hover {
+      color: var(--accent-light);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--bg-dark);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copy {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: #6B6358;
+    }
+
+    .footer-top {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-top:hover {
+      color: var(--accent-light);
+    }
+
+    /* ===== MOBILE MENU ===== */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(250, 248, 245, 0.98);
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .mobile-menu.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .mobile-menu a {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--accent);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .section { padding: 5rem 3rem; }
+      .hero-content { padding: 7rem 3rem 3rem 3rem; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .details-grid { grid-template-columns: repeat(2, 1fr); }
+      .detail-card:nth-child(2) { border-right: none; }
+      .detail-card:nth-child(1),
+      .detail-card:nth-child(2) { border-bottom: 1px solid var(--border); }
+    }
+
+    @media (max-width: 768px) {
+      .nav { padding: 1.2rem 1.5rem; }
+      .nav.scrolled { padding: 0.8rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+
+      .hero {
+        flex-direction: column-reverse;
+        min-height: auto;
+      }
+
+      .hero-image {
+        height: 70vh;
+      }
+
+      .hero-content {
+        flex: none;
+        padding: 3rem 2rem 4rem;
+      }
+
+      .hero-name { font-size: 2.8rem; }
+
+      .section { padding: 4rem 2rem; }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .about-image { order: -1; }
+
+      .about-image img { height: 400px; }
+
+      .details-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+      }
+
+      .contact-description { font-size: 1rem; }
+      .footer { padding: 1.5rem 2rem; flex-direction: column; gap: 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-name { font-size: 2.2rem; }
+      .section { padding: 3.5rem 1.5rem; }
+      .hero-content { padding: 2.5rem 1.5rem 3rem; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+      .details-grid { grid-template-columns: 1fr 1fr; }
+      .detail-value { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">PRIYANKA <em>Lalge</em></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#portfolio" onclick="closeMobileMenu()">Portfolio</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <span class="hero-label">Ethnic Fashion Model &middot; Houston, TX</span>
+      <h1 class="hero-name">
+        Priyanka
+        <em>Lalge</em>
+      </h1>
+      <p class="hero-tagline">
+        Celebrating the elegance of South Asian heritage through contemporary fashion and timeless beauty.
+      </p>
+      <a href="#portfolio" class="hero-cta">View Portfolio</a>
+    </div>
+    <div class="hero-image">
+      <img src="priyanka-photos/1a825c48-53a6-4105-ad64-ff5ccbfb96a4.JPG"
+           alt="Priyanka Lalge in a gold embellished reception lehenga"
+           loading="eager">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="about-inner">
+      <div class="fade-in">
+        <span class="section-label">About Me</span>
+        <h2 class="section-heading">Where Heritage<br><em>Meets Fashion</em></h2>
+        <div class="gold-line"></div>
+        <div class="about-text">
+          <p>
+            Born and raised with deep roots in Indian culture, I bring the richness of
+            South Asian aesthetics to every frame. From traditional bridal couture to
+            modern fusion wear, my work celebrates the beauty of ethnic fashion on
+            the global stage.
+          </p>
+          <p>
+            Based in Houston, Texas, I specialize in ethnic and bridal fashion editorials,
+            runway shows, and commercial campaigns that honor the artistry of Indian
+            craftsmanship. Whether it's the intricate zardozi of a lehenga or the
+            flowing drape of a Kanchipuram silk, I believe every garment tells a story.
+          </p>
+        </div>
+      </div>
+      <div class="about-image fade-in">
+        <img src="priyanka-photos/2a03e78b-aafc-4e6f-9642-3fac7543dc0d.JPG"
+             alt="Priyanka Lalge in traditional bridal attire — black and white portrait"
+             loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Details Section -->
+  <section class="section details" id="details">
+    <div class="details-grid fade-in">
+      <div class="detail-card">
+        <div class="detail-label">Height</div>
+        <div class="detail-value">5'3"</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">Hair</div>
+        <div class="detail-value">Black</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">Eyes</div>
+        <div class="detail-value">Black</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">Based In</div>
+        <div class="detail-value">Houston, TX</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="section portfolio" id="portfolio">
+    <div class="portfolio-header fade-in">
+      <span class="section-label">Selected Work</span>
+      <h2 class="section-heading">Portfolio</h2>
+    </div>
+
+    <div class="portfolio-filters fade-in">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="bridal">Bridal</button>
+      <button class="filter-btn" data-filter="traditional">Traditional</button>
+      <button class="filter-btn" data-filter="festive">Festive</button>
+    </div>
+
+    <div class="gallery-grid" id="gallery">
+
+      <div class="gallery-item fade-in" data-category="bridal" onclick="openLightbox(this)">
+        <img src="priyanka-photos/6120732e-a0e1-4ac0-85c6-4908e836479b.JPG"
+             alt="Red bridal lehenga with bouquet — full length"
+             loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Bridal</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-category="traditional" onclick="openLightbox(this)">
+        <img src="priyanka-photos/59756975-59e8-43c1-9dfc-286ab1c0b37b.JPG"
+             alt="Orange Kanchipuram silk saree with temple jewellery"
+             loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Traditional</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-category="festive" onclick="openLightbox(this)">
+        <img src="priyanka-photos/1a825c48-53a6-4105-ad64-ff5ccbfb96a4.JPG"
+             alt="Gold embellished reception lehenga"
+             loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Festive</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-category="bridal" onclick="openLightbox(this)">
+        <img src="priyanka-photos/26554805-99c8-4e96-817b-190d636e8ffb.JPG"
+             alt="Red bridal lehenga — natural sunlight"
+             loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Bridal</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-category="traditional" onclick="openLightbox(this)">
+        <img src="priyanka-photos/77472252-6413-468a-8f29-a8e7f8885a35.JPG"
+             alt="Orange Kanchipuram saree — side profile"
+             loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Traditional</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-category="bridal" onclick="openLightbox(this)">
+        <img src="priyanka-photos/d73a7dce-aa56-4a83-9520-ddc38a4d3c9f.JPG"
+             alt="Red bridal close-up portrait with bouquet"
+             loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Bridal</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-category="festive" onclick="openLightbox(this)">
+        <img src="priyanka-photos/0f633777-d5ac-4dba-acbf-00980cb519d2.JPG"
+             alt="Green saree with floral backdrop"
+             loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Festive</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-category="traditional" onclick="openLightbox(this)">
+        <img src="priyanka-photos/ff0889cd-4066-47cc-926a-5ccf48667530.JPG"
+             alt="Orange saree at traditional mandap"
+             loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Traditional</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-category="bridal" onclick="openLightbox(this)">
+        <img src="priyanka-photos/ba261f0a-b798-4eaf-acf4-3a11a4704bf4.JPG"
+             alt="Red bridal outfit close-up with baby's breath bouquet"
+             loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Bridal</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-category="bridal" onclick="openLightbox(this)">
+        <img src="priyanka-photos/2a03e78b-aafc-4e6f-9642-3fac7543dc0d.JPG"
+             alt="Black and white bridal portrait"
+             loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Bridal</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="fade-in">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-heading">Let's Create<br><em>Something Beautiful</em></h2>
+      <div class="gold-line"></div>
+      <p class="contact-description">
+        Available for fashion editorials, bridal campaigns, runway shows,
+        and commercial projects. Let's bring your vision to life.
+      </p>
+      <div class="contact-info">
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <span class="contact-value"><a href="mailto:priyanka@example.com">priyanka@example.com</a></span>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <span class="contact-value">Houston, Texas</span>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </div>
+          <span class="contact-value"><a href="https://instagram.com/priyankalalge" target="_blank" rel="noopener">@priyankalalge</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span class="footer-copy">&copy; 2026 Priyanka Lalge. All rights reserved.</span>
+    <a href="#hero" class="footer-top">Back to Top</a>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close lightbox">
+      <svg viewBox="0 0 24 24" fill="none">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <script>
+    /* Sticky nav background on scroll */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* Mobile menu toggle */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let menuOpen = false;
+
+    hamburger.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('active', menuOpen);
+      const spans = hamburger.querySelectorAll('span');
+      if (menuOpen) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 4px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(5px, -4px)';
+      } else {
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      }
+    });
+
+    function closeMobileMenu() {
+      menuOpen = false;
+      mobileMenu.classList.remove('active');
+      const spans = hamburger.querySelectorAll('span');
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+    }
+
+    /* Portfolio filtering */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    /* Lightbox */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    /* Fade-in on scroll via IntersectionObserver */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
